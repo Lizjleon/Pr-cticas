@@ -1,0 +1,77 @@
+
+#enlace {
+  color: blueviolet;
+  text-align: justify;
+}
+.footer {
+  color: beige;
+}
+h1 {
+  color: rgb(119, 29, 29);
+}
+h2 {
+  color: rgb(6, 56, 6);
+}
+.menu {
+  background-color: beige;
+}
+.menu li {
+  list-style-type: style none;
+  padding: 15px;
+  font: bold;
+  display: inline-block;
+  border: #5b7a97;
+}
+p {
+  color: rgb(40, 79, 110);
+  text-align: center;
+}
+.Page1 {
+  background-image: url(/images/fondo\ página1.jpg);
+  background-size: cover;
+  background-position: center;
+  color: rgb(70, 68, 68);
+  padding: 20px;
+  border-radius: 10px;
+}
+.parrafo1 {
+  background-image: url(/images/fondo\ parrafo1.jpg);
+  background-size: cover;
+  background-position: center;
+  color: rgb(39, 36, 36);
+  padding: 20px;
+  border-radius: 10px;
+}
+.parrafo2 {
+  background-image: url("/images/fondo\ parrafo2.jpg");
+  background-size: cover;
+  background-position: center;
+  color: rgb(34, 32, 32);
+  padding: 20px;
+  border-radius: 10px;
+}
+.recetas {
+  background-image: url(/images/fondo\ recetas.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rock {
+  background-image: url(/images/fondo\ rock.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+table, th, td {
+  border: 1px solid rgb(176, 148, 189);
+  border-collapse: collapse;
+  padding: 10px;
+  color: rgb(31, 10, 53);
+}
+  .viajes {
+    background-image: url(/images/fondo\ viajes.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }

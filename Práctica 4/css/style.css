@@ -1,0 +1,67 @@
+h1 {
+  color: rgb(119, 29, 29);
+}
+
+h2 {
+  color: rgb(6, 56, 6);
+}
+
+p {
+  color: rgb(40, 79, 110);
+  text-align: center;
+}
+.footer {
+  color: beige;
+}
+#enlace {
+  color: blueviolet;
+  text-align: justify;
+}
+
+.menu {
+  background-color: beige;
+}
+
+.menu li {
+  list-style-type: style none;
+  padding: 15px;
+  font: bold;
+  display: inline-block;
+  border: #5b7a97;
+}
+
+.rock {
+  background-image: url(/images/fondo\ rock.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.recetas {
+  background-image: url(/images/fondo\ recetas.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.viajes {
+  background-image: url(/images/fondo\ viajes.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.parrafo1 {
+  background-image: url(/images/fondo\ parrafo1.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.parrafo2 {
+  background-image: url("/images/fondo\ parrafo2.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}

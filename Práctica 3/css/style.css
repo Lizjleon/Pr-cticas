@@ -1,0 +1,31 @@
+h1 {
+    color: rgb(119, 29, 29);
+}
+
+h2 {
+    color: rgb(6, 56, 6);
+}
+
+p {
+    color: rgb(5, 26, 43);
+    text-align: center;
+}
+.footer {
+    color: beige;
+}
+#enlace {
+    color: blueviolet;
+    text-align: justify;
+}
+
+.menu  {
+    background-color: beige;
+}
+
+.menu li {
+    list-style-type: style none;
+    padding: 15px;
+    font: bold;
+    display: inline-block;
+    border: #5b7a97;
+}
