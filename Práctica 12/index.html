@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Juego de Bombas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <h1>¡Cuidado con las bombas!</h1>
+
+  <div class="contenedor">
+    <div class="bomba opacity" onmouseover="reproducirSonido('bomba')"><div class="mensaje">💥 ¡BOOM!</div></div>
+    <div class="bomba visibility" onmouseover="reproducirSonido('bomba')"><div class="mensaje">💥 ¡BOOM!</div></div>
+    <div class="bomba display" onmouseover="reproducirSonido('bomba')"><div class="mensaje">💥 ¡BOOM!</div></div>
+    <div class="bomba opacity" onmouseover="reproducirSonido('bomba')"><div class="mensaje">💥 ¡BOOM!</div></div>
+    <div class="bomba visibility" onmouseover="reproducirSonido('bomba')"><div class="mensaje">💥 ¡BOOM!</div></div>
+    <div class="bomba display" onmouseover="reproducirSonido('bomba')"><div class="mensaje">💥 ¡BOOM!</div></div>
+    <div class="bomba opacity" onmouseover="reproducirSonido('bomba')"><div class="mensaje">💥 ¡BOOM!</div></div>
+    <div class="bomba visibility" onmouseover="reproducirSonido('bomba')"><div class="mensaje">💥 ¡BOOM!</div></div>
+    <div class="bomba especial" onmouseover="reproducirSonido('extintor')"><div class="mensaje">💧 ¡Te salvaste!</div></div>
+  </div>
+
+  <audio id="bomba" src="/audios/bomba.mp3"></audio>
+  <audio id="extintor" src="/audios/extintor.mp3"></audio>
+
+  <script>
+    function reproducirSonido(id) {
+      const audio = document.getElementById(id);
+      audio.currentTime = 0; 
+      audio.play();
+    }
+  </script>
+
+</body>
+</html>

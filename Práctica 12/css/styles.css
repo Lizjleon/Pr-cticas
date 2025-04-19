@@ -1,0 +1,88 @@
+
+body {
+  font-family: sans-serif;
+  background-image: url("/images/Fondo.jpg"); 
+  background-size: cover;            
+  background-position: center;         
+  background-attachment: fixed;        
+  text-align: center;
+  color: #fff;
+  padding: 40px;
+}
+
+h1 {
+  color: #ffcc00;
+  text-shadow: 2px 2px 5px black; 
+}
+
+.contenedor {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.bomba {
+  width: 100px;
+  height: 100px;
+  background-image: url("/images/bomba.png");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  transition: background-image 0.3s ease;
+}
+
+.bomba:hover {
+  background-image: url("/images/explosion.png");
+}
+
+.bomba.especial:hover {
+  background-image: url("/images/agua.png");
+}
+
+.mensaje {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+.bomba.opacity .mensaje {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.bomba.opacity:hover .mensaje {
+  opacity: 1;
+}
+
+.bomba.visibility .mensaje {
+  visibility: hidden;
+}
+.bomba.visibility:hover .mensaje {
+  visibility: visible;
+}
+
+.bomba.display .mensaje {
+  display: none;
+}
+.bomba.display:hover .mensaje {
+  display: block;
+}
+
+.bomba.especial .mensaje {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.bomba.especial:hover .mensaje {
+  opacity: 1;
+}
+
+  
