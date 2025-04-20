@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f2f756;
+    font-family: Arial, sans-serif;
+}
+
+.cuadrado {
+    width: 400px;
+    height: 400px;
+    background-color: #240f9b;
+    border-radius: 0; 
+    transition: all 0.3s ease; 
+}
+
+.cuadrado:hover {
+    background-color: #e74c3c; 
+    border-radius: 50%; 
+}
