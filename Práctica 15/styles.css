@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #efd3e4;
+  }
+  
+  .pelota {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(104, 38, 94);
+    border-radius: 50%;
+    position: relative;
+    animation: rebote 2s infinite;
+  }
+  
+  @keyframes rebote {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(200px) scaleY(0.7);
+    }
+    50% {
+      transform: translateY(0) scaleY(1);
+    }
+    70% {
+      transform: translateY(100px) scaleY(0.85);
+    }
+    100% {
+      transform: translateY(0) scaleY(1);
+    }
+  }
+  
