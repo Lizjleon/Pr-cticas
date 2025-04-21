@@ -86,7 +86,7 @@ main {
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      flex: 0 1 calc(33.33% - 20px); // Tres por fila
+      flex: 0 1 calc(33.33% - 20px); 
       max-width: 300px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
 
