@@ -1,0 +1,37 @@
+
+.header-hover:hover {
+    background-color: #0056b3;
+    transition: background-color 0.3s ease;
+  }
+  
+  .sidebar-hover:hover {
+    background-color: #f8d7da;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+ 
+  .article-bounce {
+    animation: bounce 2s infinite;
+  }
+ 
+  .footer-hover:hover {
+    background-color: #343a40;
+    transition: background-color 0.3s ease;
+  }
+  
+  h1, h2 {
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+   
