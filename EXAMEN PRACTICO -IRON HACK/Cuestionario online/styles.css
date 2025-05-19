@@ -1,0 +1,68 @@
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f0f4f8;
+    color: #464545;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.quiz-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#question-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+    background-color: #7da3cc;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+#score-container {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.option-btn.selected {
+    background-color: #a1a2a3; /* Azul */
+    color: white; /* Texto blanco */
+    border: 2px solid #4e5f71; /* Borde azul oscuro */
+}
