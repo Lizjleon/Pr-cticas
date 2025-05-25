@@ -31,37 +31,37 @@ p {
 }
 
 .rock {
-  background-image: url(/images/fondo\ rock.jpg);
+  background-image: url("../images/fondo\ rock.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .recetas {
-  background-image: url(/images/fondo\ recetas.jpg);
+  background-image: url("../images/fondo\ recetas.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .viajes {
-  background-image: url(/images/fondo\ viajes.jpg);
+  background-image: url("../images/fondo\ viajes.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .parrafo1 {
-  background-image: url(/images/fondo\ parrafo1.jpg);
+  background-image: url("../images/fondo\ parrafo1.jpg");
   background-size: cover;
   background-position: center;
-  color: white;
+  color: rgb(225, 221, 221);
   padding: 20px;
   border-radius: 10px;
 }
 .parrafo2 {
-  background-image: url("/images/fondo\ parrafo2.jpg");
+  background-image: url("../images/fondo\ parrafo2.jpg");
   background-size: cover;
   background-position: center;
-  color: white;
+  color: rgb(225, 221, 221);
   padding: 20px;
   border-radius: 10px;
 }
