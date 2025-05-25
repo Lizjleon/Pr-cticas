@@ -1,34 +1,10 @@
 const questions = [
-    {
-        question: "¿Cuánto es 5x60?",
-        options: ["30", "8", "0", "300"],
-        answer: 3
-    },
-    {
-        question: "¿Cuál es la capital de Ecuador?",
-        options: ["Madrid", "Berlín", "Quito", "Caracas"],
-        answer: 2
-    },
-    {
-        question: "¿Cuaántas copas de futbol nacionales e internacionales tiene el Barça?",
-        options: ["200", "100", "50", "102"],
-        answer: 3
-    },
-    {
-        question: "¿Quién es el Rey de España?",
-        options: ["Carlos I", "Felipe VI", "Fernando VI", "Alfonso XII"],
-        answer: 1
-    },
-    {
-        question: "¿Cuántas comunidades tiene España?",
-        options: ["19", "17", "30", "22"],
-        answer: 1
-    },
-    {
-        question: "¿Cuál es la moneda de Reino Unido?",
-        options: ["Libra Esterlina","Dolár", "Euro","Yen"],
-        answer: 0
-    }
+    { question: "¿Cuánto es 5x60?", options: ["30", "8", "0", "300"], answer: 3 },
+    { question: "¿Cuál es la capital de Ecuador?", options: ["Madrid", "Berlín", "Quito", "Caracas"], answer: 2 },
+    { question: "¿Cuántas copas de fútbol nacionales e internacionales tiene el Barça?", options: ["200", "100", "50", "102"], answer: 3 },
+    { question: "¿Quién es el Rey de España?", options: ["Carlos I", "Felipe VI", "Fernando VI", "Alfonso XII"], answer: 1 },
+    { question: "¿Cuántas comunidades tiene España?", options: ["19", "17", "30", "22"], answer: 1 },
+    { question: "¿Cuál es la moneda de Reino Unido?", options: ["Libra Esterlina", "Dólar", "Euro", "Yen"], answer: 0 }
 ];
 
 let currentQuestionIndex = 0;
@@ -61,21 +37,17 @@ function selectOption(selectedIndex) {
     optionButtons.forEach(button => button.classList.remove("selected"));
 
     optionButtons[selectedIndex].classList.add("selected");
-
+    nextBtn.disabled = false;
     if (selectedIndex === correctIndex) {
         score++;
     }
-
-    nextBtn.disabled = false;
 }
-
 
 function nextQuestion() {
     currentQuestionIndex++;
-
     if (currentQuestionIndex < questions.length) {
         loadQuestion(currentQuestionIndex);
-        nextBtn.disabled = true; 
+        nextBtn.disabled = true;
     } else {
         showScore();
     }
@@ -90,20 +62,13 @@ function showScore() {
     const totalQuestions = questions.length;
     const incorrectAnswers = totalQuestions - score;
 
-    let message = "";
-    if (score === totalQuestions) {
-        message = "¡Perfecto! Todas tus respuestas son correctas. 🎉";
-    } else if (score === 0) {
-        message = "Has fallado todas las preguntas. 😢";
-    } else {
-        message = `Has acertado ${score} y fallado ${incorrectAnswers}.🤔`;
-    }
-
-    scoreDisplay.textContent = message;
+    scoreDisplay.textContent =
+        score === totalQuestions
+            ? "¡Perfecto! Todas tus respuestas son correctas. 🎉"
+            : score === 0
+            ? "Has fallado todas las preguntas. 😢"
+            : `Has acertado ${score} y fallado ${incorrectAnswers}.🤔`;
 }
 
-
-
 loadQuestion(currentQuestionIndex);
-
 nextBtn.addEventListener("click", nextQuestion);
