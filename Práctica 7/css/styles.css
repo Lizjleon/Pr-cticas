@@ -5,7 +5,6 @@ body {
     justify-content: center;
     margin: 0;
     min-height: 100vh;
-
   }
 
   .contenedores {
@@ -35,7 +34,7 @@ body {
   }
 
   .skyblue {
-    background-color:rgb(106, 223, 217);
+    background-color:rgb(46, 29, 229);
     grid-column: 4 / 7;
     grid-row: 3 / 4;
   }
@@ -59,7 +58,7 @@ body {
   }
 
   .skyblue-large {
-    background-color: rgb(106, 223, 217);
+    background-color:rgb(55, 29, 229);
     grid-column: 2 / 10;
     grid-row: 6;
   }
