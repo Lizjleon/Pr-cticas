@@ -1,0 +1,29 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Panel admin</title><link rel="stylesheet" href="/css/styles.css"></head><body>
+<%- include('partials/nav') %>
+<main class="container">
+  <div class="card">
+    <h1>Panel organizadores</h1>
+    <% if (messages.success) { %><div class="alert alert-success"><%= messages.success %></div><% } %>
+    <h3>Participantes</h3>
+    <table class="table"><thead><tr><th>Dorsal</th><th>Nombre</th><th>DNI</th><th>Acciones</th></tr></thead><tbody>
+    <% parts.forEach(p=>{ %>
+      <tr><td><%= p.id %></td><td><%= p.nombre %> <%= p.apellidos %></td><td><%= p.dni %></td>
+        <td>
+          <a class="btn btn-pastel2" href="/admin/edit/<%= p.id %>">Editar</a>
+          <form style="display:inline" method="post" action="/admin/delete/<%= p.id %>"><button class="btn btn-pastel3" type="submit">Borrar</button></form>
+        </td></tr>
+    <% }) %></tbody></table>
+    <h3>Asignar ganadores</h3>
+    <form method="post" action="/admin/winner">
+      <div class="form-group"><label>Dorsal (id participante)</label><input name="participant_id" required></div>
+      <div class="form-group"><label>Posición (1,2,3)</label><input name="posicion" required></div>
+      <button class="btn btn-pastel" type="submit">Asignar</button>
+    </form>
+    <h3>Ganadores actuales</h3>
+    <table class="table"><thead><tr><th>Pos</th><th>Nombre</th></tr></thead><tbody>
+      <% winners.forEach(w=>{ %><tr><td><%= w.posicion %></td><td><%= w.nombre %> <%= w.apellidos %></td></tr><% }) %>
+    </tbody></table>
+  </div>
+</main>
+<footer class="footer"><a class="return" href="/">Volver a Inicio</a></footer></body></html>

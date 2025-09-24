@@ -1,0 +1,20 @@
+<nav class="topnav">
+  <a href="/">Inicio</a>
+
+  <% if (admin) { %>
+
+    <a href="/admin">Panel</a>
+    <a href="/logout">Cerrar sesión</a>
+
+  <% } else if (user) { %>
+
+    <a href="/profile">Mi perfil</a>
+    <a href="/logout">Cerrar sesión</a>
+
+  <% } else { %>
+
+    <a href="/register">Inscribirse</a>
+    <a href="/login">Iniciar sesión</a>
+    <a href="/admin/login">Organizadores</a>
+  <% } %>
+</nav>

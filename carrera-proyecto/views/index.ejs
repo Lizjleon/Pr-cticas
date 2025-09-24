@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Inicio - Carrera Parque Ciudadela</title>
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<%- include('partials/nav') %>
+<main class="container">
+  <div class="card">
+    <h1>Carrera Parque Ciudadela</h1>
+    <p>Bienvenido/a. Fecha: 15/05/2026 - Hora: 09:00 - Lugar: Parque Ciudadela.</p>
+    <p class="muted">Inscríbete y consigue tu dorsal.</p>
+    <div class="card hero-card">
+  <div class="hero">
+    <img src="/img/ciutadella.jpg" alt="Parque de la Ciutadella, Barcelona" class="hero-img">
+    <div class="hero-overlay">
+      <h2>Carrera Parque Ciudadela</h2>
+      <p>Recorrido y salida desde el corazón del parque.</p>
+    </div>
+  </div>
+</div>
+
+<% if (!user && !admin) { %>
+
+  <a class="btn btn-pastel" href="/register">Inscribirse</a>
+<% } %>
+
+<a class="btn btn-pastel2" href="/info">Ver información</a>
+
+
+  </div>
+  <div class="card">
+    <h2>Noticias</h2>
+    <p>Próximamente más detalles sobre el recorrido y la entrega de dorsales.</p>
+  </div>
+</main>
+<footer class="footer">  Proyecto de práctica  <a class="return" href="/">  Volver a Inicio  </a></footer>
+</body>
+</html>

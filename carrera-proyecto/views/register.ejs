@@ -1,0 +1,25 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Inscripción</title><link rel="stylesheet" href="/css/styles.css"></head><body>
+<%- include('partials/nav') %>
+
+  <div class="card">
+    <h1>Formulario de inscripción</h1>
+    <% if (messages.error) { %><div class="alert alert-error"><%= messages.error %></div><% } %>
+    <form method="post" action="/register">
+      <div class="form-group"><label>Nombre</label><input name="nombre" required></div>
+      <div class="form-group"><label>Apellidos</label><input name="apellidos" required></div>
+      <div class="form-group"><label>DNI</label><input name="dni" required></div>
+      <div class="form-group"><label>Teléfono</label><input name="telefono"></div>
+      <div class="form-group"><label>Calle</label><input name="calle"></div>
+      <div class="form-group"><label>Número</label><input name="numero"></div>
+      <div class="form-group"><label>Población</label><input name="poblacion"></div>
+      <div class="form-group"><label>Código postal</label><input name="cp"></div>
+      <div class="form-group"><label>Contraseña (para editar más tarde)</label><input type="password" name="password" required></div>
+      <button class="btn btn-pastel" type="submit">Enviar inscripción</button>
+    </form>
+    <p class="muted">Al enviar se te asignará un número de dorsal (tu id).</p>
+  </div>
+</main>
+<footer class="footer"><a class="return" href="/">Volver a Inicio</a></footer>
+</body></html>

@@ -1,0 +1,18 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Información</title><link rel="stylesheet" href="/css/styles.css"></head><body>
+<%- include('partials/nav') %>
+<main class="container">
+  <div class="card">
+    <h1>Información de la carrera</h1>
+    <p>Número de participantes registrados: <strong><%= count %></strong></p>
+    <h3>Ganadores</h3>
+    <% if (winners.length===0) { %><p>No hay ganadores registrados todavía.</p><% } else { %>
+    <table class="table"><thead><tr><th>Posición</th><th>Nombre</th><th>Dorsal</th></tr></thead><tbody>
+      <% winners.forEach(w=>{ %>
+        <tr><td><%= w.posicion %></td><td><%= w.nombre %> <%= w.apellidos %></td><td><%= w.id %></td></tr>
+      <% }) %>
+    </tbody></table>
+    <% } %>
+  </div>
+</main>
+<footer class="footer"><a class="return" href="/">Volver a Inicio</a></footer></body></html>

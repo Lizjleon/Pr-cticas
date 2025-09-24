@@ -1,0 +1,31 @@
+CREATE DATABASE IF NOT EXISTS carrera_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE carrera_db;
+
+CREATE TABLE IF NOT EXISTS participants (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100),
+  apellidos VARCHAR(100),
+  dni VARCHAR(20) UNIQUE,
+  telefono VARCHAR(20),
+  calle VARCHAR(100),
+  numero VARCHAR(10),
+  poblacion VARCHAR(100),
+  cp VARCHAR(10),
+  password VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS winners (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  participant_id INT,
+  posicion INT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (participant_id) REFERENCES participants(id) ON DELETE SET NULL
+);
+
+CREATE TABLE IF NOT EXISTS admins (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) UNIQUE,
+  password VARCHAR(255)
+);
+
