@@ -1,0 +1,438 @@
+/* === Variables globales === */
+:root {
+  --rosa: #ff77b0;
+  --violeta: #7b5cff;
+  --fondo: #fff7ff;
+  --texto: #2b2540;
+}
+
+/* === Base general === */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  transition: background 0.3s, color 0.3s;
+}
+
+main {
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+/* === Header === */
+header {
+  background: linear-gradient(90deg, var(--violeta), var(--rosa));
+  color: white;
+  text-align: center;
+  padding: 1.8rem 1rem;
+  margin-top: 60px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* 🔹 Estilo del título principal */
+header h1 {
+  font-size: 2rem;           /* aumenta tamaño del texto */
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.4rem;
+}
+
+/* 🔹 Subtítulo o descripción debajo */
+header p {
+  font-size: 1.1rem;          /* antes era 0.9rem */
+  opacity: 0.95;
+  margin-top: 0.3rem;
+}
+
+/* Responsive: ajusta bien en móviles */
+@media (max-width: 600px) {
+  header {
+    margin-top: 80px;
+    padding: 1.2rem 0.8rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+}
+
+/* === Barra superior fija (global) === */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(123, 92, 255, 0.95);
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.navbar button {
+  background-color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #7b5cff;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.navbar button:hover {
+  background-color: #7b5cff;
+  color: white;
+  transform: scale(1.05);
+}
+
+.spacer {
+  height: 60px;
+}
+
+/* Responsivo navbar */
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .navbar button {
+    padding: 8px 10px;
+    font-size: 0.9rem;
+  }
+
+  .spacer {
+    height: 80px;
+  }
+}
+
+/* === Secciones === */
+section {
+  margin: 2rem auto;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* === Cuadrícula de carreras === */
+.grid-carreras {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  padding: 1rem;
+  background: #2b2540;     
+  border-radius: 12px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover { 
+  transform: scale(1.03); 
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+  color: #2b2540;
+}
+
+.card p {
+  margin: 0.3rem 0 0.8rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card button {
+  background: var(--violeta);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+  margin-bottom: 1rem;
+}
+
+.card button:hover {
+  background: var(--rosa);
+}
+
+/* Responsive cards */
+@media (max-width: 600px) {
+  .grid-carreras {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}
+
+/* === Formularios === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+input, select, button {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="color"] {
+  padding: 0;
+  height: 40px;
+  cursor: pointer;
+}
+
+button {
+  background: var(--violeta);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button.borrar {
+  background: var(--rosa);
+  color: white;
+}
+
+button.borrar:hover {
+  opacity: 0.9;
+}
+
+/* === Mensajes === */
+.error-msg {
+  color: #ff4d4d;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.success-msg {
+  color: #4fff7a;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* === Vista previa del dorsal === */
+#dorsalPreviewContainer {
+  text-align: center;
+  margin: 1rem auto;
+}
+
+#dorsalPreview {
+  background: var(--violeta);
+  color: white;
+  width: 300px;
+  height: 180px;
+  border-radius: 12px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+#dorsalPreview p {
+  margin: 0;
+  font-weight: bold;
+}
+
+#nombrePreview {
+  font-size: 1.1rem;
+}
+
+#numeroPreview {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* === Panel del Administrador === */
+.admin-header {
+  background: #111;
+  color: #ff77b0;
+  padding: 1.5rem;
+  text-align: center;
+  border-bottom: 2px solid #ff77b0;
+}
+
+.admin-panel {
+  background: #1e1a2a;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filtros {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.filtros select,
+.filtros button {
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-weight: 600;
+  margin: 0 0.3rem;
+}
+
+.filtros select {
+  border: 1px solid #ccc;
+}
+
+.filtros button {
+  background: #7b5cff;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filtros button:hover {
+  background: #9f7bff;
+}
+
+/* === Lista de participantes (corregida y legible) === */
+.lista-participantes {
+  background: #ffffff;
+  color: #222 !important; /* texto oscuro visible */
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  list-style: none;
+}
+
+.lista-participantes li {
+  background: #fff;
+  border-radius: 6px;
+  margin: 0.6rem 0;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #222 !important;
+  border: 1px solid #ddd;
+}
+
+.lista-participantes li:hover {
+  background: #f8f8ff;
+}
+
+.lista-participantes button {
+  background: #ff77b0;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.lista-participantes button:hover {
+  background: #ff5c9a;
+}
+
+/* === Otros === */
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.fecha {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* === Responsivo general === */
+@media (max-width: 400px) {
+  h1 { font-size: 1.2rem; }
+  h2 { font-size: 1rem; }
+  button { padding: 0.5rem; }
+}
+
+@media (max-width: 500px) {
+  .grid-carreras {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .card img {
+    height: 140px;
+  }
+
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  form {
+    padding: 0.5rem;
+  }
+}
