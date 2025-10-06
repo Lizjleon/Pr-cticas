@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administrador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Bienvenido, {{ username }}</h2>
+        {% if role == 'admin' %}
+            <p>🔹 Rol: Administrador</p>
+            <p>Aquí puedes ver información confidencial del sistema.</p>
+            <ul style="text-align:left">
+                <li>Total de usuarios registrados: próximamente 😉</li>
+                <li>Última conexión: {{ username }}</li>
+            </ul>
+        {% else %}
+            <p>🔹 Rol: Editor</p>
+            <p>No tienes permisos para ver la información del administrador.</p>
+        {% endif %}
+        <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+    </div>
+</body>
+</html>
