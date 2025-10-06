@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= titulo %></title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main class="container">
+    <h2>Acerca de este proyecto</h2>
+    <p>Proyecto de ejemplo para mostrar cómo usar EJS con Express y partials.</p>
+
+    <h3>Cómo usar</h3>
+    <ol>
+      <li>Instala dependencias: <code>npm install</code></li>
+      <li>Arranca el servidor: <code>npm start</code></li>
+      <li>Abre <code>http://localhost:3000</code></li>
+    </ol>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>

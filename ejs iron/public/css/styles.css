@@ -1,0 +1,116 @@
+/* Paleta pastel */
+:root{
+  --bg: #f7f8fb;
+  --muted: #cfd8e3;
+  --pastel-1: #f8d7e0; /* rosa */
+  --pastel-2: #d7f0ea; /* menta */
+  --pastel-3: #f6f0d7; /* amarillo pálido */
+  --pastel-4: #dbe7ff; /* azul claro */
+  --text: #27323a;
+  --accent: #a28bd4;
+}
+
+/* Reset muy pequeño */
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg), #ffffff);
+  color:var(--text);
+  line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+a{color:inherit;text-decoration:none}
+
+.container{
+  max-width:1100px;
+  margin:0 auto;
+  padding:1.25rem;
+}
+
+/* Header */
+.site-header{
+  background: linear-gradient(90deg, var(--pastel-4), var(--pastel-2));
+  box-shadow: 0 2px 8px rgba(39,50,58,0.06);
+}
+.nav-container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:0.75rem 1.25rem;
+}
+.logo{
+  font-weight:700;
+  letter-spacing:0.2px;
+}
+.nav{
+  display:flex;
+  gap:1rem;
+}
+.nav a{
+  padding:0.5rem 0.75rem;
+  border-radius:8px;
+}
+.nav a:hover{background:rgba(255,255,255,0.35)}
+
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
+
+/* Hero */
+.hero{
+  text-align:center;
+  padding:3rem 1rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.0));
+  border-radius:12px;
+  margin-top:1rem;
+}
+.hero .brand{
+  display:inline-block;
+  padding:0.25rem 0.5rem;
+  border-radius:6px;
+  background:linear-gradient(90deg,var(--pastel-1),var(--pastel-3));
+  color:var(--text);
+}
+.lead{margin:1rem 0 1.5rem;color:#41525a}
+
+.btn{
+  display:inline-block;
+  padding:0.6rem 1rem;
+  border-radius:9px;
+  background:linear-gradient(90deg,var(--accent), #9bb8e8);
+  color:white;
+  font-weight:600;
+}
+
+/* Cards */
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+  margin:2rem 0;
+}
+.card{
+  padding:1rem;
+  border-radius:10px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.3));
+  box-shadow:0 4px 12px rgba(39,50,58,0.06);
+}
+
+/* Footer */
+.site-footer{
+  margin-top:2rem;
+  padding:1rem 0;
+  text-align:center;
+  color:#47585a;
+}
+
+/* Responsive */
+@media (max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  .cards{grid-template-columns:1fr}
+  .nav{display:none}
+  .nav-toggle{display:block}
+}

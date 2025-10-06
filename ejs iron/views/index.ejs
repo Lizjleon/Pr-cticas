@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><%= titulo %></title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <%- include('partials/header') %>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Bienvenido a <span class="brand">Mi sitio pastel</span></h1>
+      <p class="lead">Un ejemplo con EJS, diseño responsive y paleta de colores pasteles.</p>
+      <a class="btn" href="/about">Conoce más</a>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h3>Rápido</h3>
+        <p>Servidor Express con vistas EJS y partials.</p>
+      </article>
+      <article class="card">
+        <h3>Responsive</h3>
+        <p>Diseño adaptativo para móviles, tablets y desktop.</p>
+      </article>
+      <article class="card">
+        <h3>Colores pasteles</h3>
+        <p>Tipografía limpia y paleta suave para mejor legibilidad.</p>
+      </article>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>
+</body>
+</html>
