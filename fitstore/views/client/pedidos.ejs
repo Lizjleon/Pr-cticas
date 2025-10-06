@@ -1,0 +1,45 @@
+<%- include('../Layout', { 
+  body: `
+  <div class="card" style="max-width:900px;margin:auto;margin-top:60px;text-align:center;">
+    <h2 style="color:var(--color-primary);margin-bottom:30px;">Mis Pedidos</h2>
+
+    ${pedidos.length === 0 
+      ? `<p style="color:var(--color-secondary);">Aún no tienes pedidos registrados.</p>`
+      : `
+        <table style="width:100%;border-collapse:collapse;color:white;">
+          <thead>
+            <tr style="background-color:#111;">
+              <th style="padding:10px;border-bottom:1px solid var(--color-secondary);">ID</th>
+              <th style="padding:10px;border-bottom:1px solid var(--color-secondary);">Total (€)</th>
+              <th style="padding:10px;border-bottom:1px solid var(--color-secondary);">Estado</th>
+              <th style="padding:10px;border-bottom:1px solid var(--color-secondary);">Pago</th>
+              <th style="padding:10px;border-bottom:1px solid var(--color-secondary);">Método</th>
+              <th style="padding:10px;border-bottom:1px solid var(--color-secondary);">Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${pedidos.map(p => `
+              <tr>
+                <td style="padding:8px;">${p.id}</td>
+                <td style="padding:8px;">${p.total}</td>
+                <td style="padding:8px;">${p.estado}</td>
+                <td style="padding:8px;">${p.estado_pago}</td>
+                <td style="padding:8px;">${p.metodo_pago}</td>
+                <td style="padding:8px;">${new Date(p.fecha).toLocaleDateString()}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `
+    }
+
+    <div style="margin-top:20px;">
+      <a href="/cliente" 
+         style="background:linear-gradient(to right,var(--color-primary),var(--color-secondary));
+                color:black;padding:10px 20px;border-radius:10px;text-decoration:none;font-weight:bold;">
+        ← Volver al panel
+      </a>
+    </div>
+  </div>
+  `
+}) %>

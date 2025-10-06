@@ -1,0 +1,22 @@
+<%- include('../Layout', { 
+  body: `
+  <div class="card" style="max-width:800px;margin:auto;margin-top:100px;text-align:center;">
+    <h2 style="color:var(--color-primary);">Bienvenido, ${email}</h2>
+    <p style="margin-top:10px;">Aquí puedes revisar tus pedidos.</p>
+
+    <div style="margin-top:30px;">
+      <a href="/cliente/pedidos" 
+         style="background:linear-gradient(to right,var(--color-primary),var(--color-secondary));
+                color:black;padding:10px 20px;border-radius:10px;text-decoration:none;font-weight:bold;margin-right:10px;">
+        Ver mis pedidos
+      </a>
+
+      <a href="/logout" 
+         style="background:linear-gradient(to right,#ff6b6b,#ff4040);
+                color:white;padding:10px 20px;border-radius:10px;text-decoration:none;font-weight:bold;">
+        Cerrar sesión
+      </a>
+    </div>
+  </div>
+  `
+}) %>

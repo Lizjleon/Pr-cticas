@@ -1,0 +1,130 @@
+/* === Tema oscuro moderno === */
+:root {
+  --color-bg: #0d0d0d;
+  --color-primary: #00ffc8;
+  --color-secondary: #ff0080;
+  --color-text: #f0f0f0;
+  --color-card: #1a1a1a;
+  --color-border: #333;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Layout general */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+h1, h2, h3 {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Botones */
+button, .btn {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border: none;
+  border-radius: 8px;
+  color: black;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover, .btn:hover {
+  opacity: 0.8;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  text-align: center;
+}
+
+th {
+  background-color: var(--color-secondary);
+  color: black;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, select {
+  background-color: #111;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 10px;
+  color: var(--color-text);
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+}
+body {
+  background: radial-gradient(circle at top left, #111 0%, #000 100%);
+  color: var(--color-text);
+  font-family: 'Poppins', sans-serif;
+}
+
+button {
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border: none;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
