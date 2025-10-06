@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NodeCursos</title>
+  <style>
+    :root {
+      --bg-color: #0e0e10;
+      --card-color: #1e1e22;
+      --text-color: #f5f5f5;
+      --accent: #00ffc6;
+      --accent-hover: #00d4a3;
+      --error: #ff5577;
+      --success: #55ff99;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Roboto, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: #121214;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #222;
+    }
+
+    header a.logo {
+      color: var(--accent);
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      margin-left: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      border-top: 1px solid #222;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      transform: scale(1.05);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--accent);
+      border: 2px solid var(--accent);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .hero .accent {
+      color: var(--accent);
+    }
+
+    .hero-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: var(--card-color);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: left;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .alert {
+      padding: 0.8rem 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .alert.error { background: var(--error); color: #fff; }
+    .alert.success { background: var(--success); color: #000; }
+
+    @media (max-width: 600px) {
+      header { flex-direction: column; gap: 0.5rem; }
+      main { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="/" class="logo">NodeCursos</a>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/courses/public">Cursos</a>
+      <% if (!user) { %>
+        <a href="/auth/login">Login</a>
+        <a href="/auth/register">Registro</a>
+      <% } else { %>
+        <a href="/profile">Perfil</a>
+        <% if (user.rol === 'admin') { %>
+          <a href="/admin">Admin</a>
+        <% } %>
+        <a href="/auth/logout">Salir</a>
+      <% } %>
+    </nav>
+  </header>
+
+  <main>
+    <% if (success && success.length > 0) { %>
+      <div class="alert success"><%= success %></div>
+    <% } %>
+
+    <% if (error && error.length > 0) { %>
+      <div class="alert error"><%= error %></div>
+    <% } %>
+
+    <!-- 👇 Aquí se insertará el contenido de cada vista -->
+    <%- body %>
+  </main>
+
+  <footer>
+    © <%= new Date().getFullYear() %> NodeCursos. Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>

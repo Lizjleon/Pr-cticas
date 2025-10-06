@@ -1,0 +1,20 @@
+<section class="hero">
+  <div>
+    <h1>Bienvenido a <span class="accent">NodeCursos</span></h1>
+    <p>Explora cursos, inscríbete y aprende. Tema oscuro, colores llamativos y diseño responsive.</p>
+    <div class="hero-actions">
+      <a href="/courses/public" class="btn">Ver cursos públicos</a>
+      <% if (!user) { %>
+        <a href="/auth/register" class="btn ghost">Crear cuenta</a>
+      <% } %>
+    </div>
+  </div>
+  <div class="hero-list">
+    <% cursos.forEach(c => { %>
+      <article class="card small">
+        <h4><%= c.titulo %></h4>
+        <p><%= c.categoria %></p>
+      </article>
+    <% }) %>
+  </div>
+</section>

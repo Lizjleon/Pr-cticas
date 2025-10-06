@@ -1,0 +1,20 @@
+<section>
+  <h2><%= titulo || 'Cursos' %></h2>
+  <div class="grid">
+    <% cursos.forEach(c => { %>
+      <article class="card">
+        <h3><%= c.titulo %></h3>
+        <p class="muted"><%= c.categoria %> • <%= c.visibilidad %></p>
+        <p><%= c.descripcion ? (c.descripcion.length > 120 ? c.descripcion.substring(0,120) + '...' : c.descripcion) : '' %></p>
+        <div class="card-actions">
+          <a href="/courses/<%= c.id %>" class="btn small ghost">Ver</a>
+          <% if (user) { %>
+            <form action="/courses/<%= c.id %>/enroll" method="post" style="display:inline">
+              <button class="btn small">Inscribirme</button>
+            </form>
+          <% } %>
+        </div>
+      </article>
+    <% }) %>
+  </div>
+</section>

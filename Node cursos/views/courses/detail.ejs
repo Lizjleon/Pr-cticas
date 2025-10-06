@@ -1,0 +1,14 @@
+<section class="card">
+  <h2><%= curso.titulo %></h2>
+  <p class="muted"><%= curso.categoria %> • <%= curso.visibilidad %></p>
+  <p><%= curso.descripcion %></p>
+  <div class="card-actions">
+    <% if (user) { %>
+      <form action="/courses/<%= curso.id %>/enroll" method="post">
+        <button class="btn">Inscribirme</button>
+      </form>
+    <% } else { %>
+      <a href="/auth/login" class="btn">Inicia sesión para inscribirte</a>
+    <% } %>
+  </div>
+</section>

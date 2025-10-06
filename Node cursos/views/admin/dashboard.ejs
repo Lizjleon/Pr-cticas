@@ -1,0 +1,18 @@
+<section>
+  <h2>Panel de administración</h2>
+  <a href="/admin/courses/new" class="btn">Crear curso</a>
+  <div class="grid">
+    <% cursos.forEach(c => { %>
+      <article class="card">
+        <h3><%= c.titulo %></h3>
+        <p class="muted"><%= c.categoria %></p>
+        <div class="card-actions">
+          <a href="/admin/courses/<%= c.id %>/edit" class="btn small">Editar</a>
+          <form action="/admin/courses/<%= c.id %>?_method=DELETE" method="post" style="display:inline">
+            <button class="btn small danger">Eliminar</button>
+          </form>
+        </div>
+      </article>
+    <% }) %>
+  </div>
+</section>

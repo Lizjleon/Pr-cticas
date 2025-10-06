@@ -1,0 +1,26 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="/css/style.css" />
+<title><%= typeof titulo !== 'undefined' ? titulo + ' | ' : '' %>NodeCursos</title>
+________________________________________
+views/partials/header.ejs
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand">Node<span class="accent">Cursos</span></a>
+    <nav class="main-nav">
+      <a href="/">Inicio</a>
+      <a href="/courses/public">Cursos públicos</a>
+      <% if (!user) { %>
+        <a href="/auth/login">Iniciar sesión</a>
+        <a href="/auth/register" class="btn small">Registro</a>
+      <% } else { %>
+        <a href="/profile">Hola, <%= user.nombre %></a>
+        <a href="/courses">Mis cursos</a>
+        <% if (user.role === 'admin') { %>
+          <a href="/admin">Admin</a>
+        <% } %>
+        <a href="/auth/logout" class="btn small">Cerrar sesión</a>
+      <% } %>
+    </nav>
+  </div>
+</header>
