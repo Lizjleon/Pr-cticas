@@ -48,11 +48,12 @@ db.serialize(() => {
     FOREIGN KEY (carrera_id) REFERENCES carreras(id) ON DELETE CASCADE
   )`);
 
-  // Insertar carreras por defecto
+  // Insertar carreras por defecto (✅ añadida Valencia)
   const carreras = [
     ['Barcelona', '2026-01-17'],
     ['Madrid', '2026-02-21'],
     ['Alicante', '2026-02-11'],
+    ['Valencia', '2026-03-01'], // ✅ Nueva línea
     ['Sevilla', '2026-04-04'],
     ['Galicia', '2026-05-16']
   ];
@@ -118,7 +119,6 @@ app.post('/api/login', (req, res) => {
     (err, row) => {
       if (err) return res.status(500).json({ error: err.message });
       if (!row) return res.status(401).json({ error: 'Credenciales incorrectas' });
-      // Si hay varias inscripciones puede devolver la primera; frontend asume dorsal en row.dorsal
       res.json(row);
     });
 });
@@ -200,5 +200,4 @@ app.get('/api/carreras', (req, res) => {
 
 // Start
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log(`Servidor iniciado en http://localhost:${PORT}`));
-
+app.listen(PORT, () => console.log(`Servidor iniciado en http://localhost:${PORT}`))
