@@ -11,7 +11,8 @@ const infoLocal = {
   "Madrid":    { fecha: "21/02/2026", distancia: "10 km", hora: "10:00 a.m.", imagen: "img/Madrid.jpg", descripcion: "Vive la emoción en el corazón de la capital, entre historia y modernidad." },
   "Alicante":  { fecha: "11/02/2026", distancia: "5 km",  hora: "11:00 a.m.", imagen: "img/Alicante.jpg", descripcion: "Una carrera con vistas al mar, ideal para quienes aman el sol." },
   "Sevilla":   { fecha: "04/04/2026", distancia: "10 km", hora: "09:30 a.m.", imagen: "img/Sevilla.jpg", descripcion: "Corre entre la historia y la alegría de una ciudad llena de arte." },
-  "Galicia":   { fecha: "16/05/2026", distancia: "8 km",  hora: "10:00 a.m.", imagen: "img/Galicia.jpg", descripcion: "Paisajes verdes, aire puro y un recorrido natural inolvidable." }
+  "Galicia":   { fecha: "16/05/2026", distancia: "8 km",  hora: "10:00 a.m.", imagen: "img/Galicia.jpg", descripcion: "Paisajes verdes, aire puro y un recorrido natural inolvidable." },
+  "Valencia":   { fecha: "01/03/2026", distancia: "8 km",  hora: "10:00 a.m.", imagen: "img/Galicia.jpg", descripcion: "Un paseo entre la tradición y el futuro" }
 };
 
 async function cargarDatos(ciudad) {
