@@ -5,7 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { nombre: "Madrid", fecha: "21/02/2026", imagen: "img/Madrid.jpg" },
     { nombre: "Alicante", fecha: "11/02/2026", imagen: "img/Alicante.jpg" },
     { nombre: "Galicia", fecha: "16/05/2026", imagen: "img/Galicia.jpg" },
-    { nombre: "Sevilla", fecha: "04/04/2026", imagen: "img/Sevilla.jpg" }
+    { nombre: "Sevilla", fecha: "04/04/2026", imagen: "img/Sevilla.jpg" },
+    { nombre: "Valencia", fecha: "01/03/2026", imagen: "img/Valencia.jpg" }
   ];
 
   const contenedor = document.getElementById("carrerasContainer");
@@ -31,4 +32,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
